@@ -2,6 +2,7 @@ import Chat from "./mediator/Chat";
 import ChatUser from "./mediator/ChatUser";
 import Caretaker from "./memento/careTaker";
 import TextEditor from "./memento/textEditor";
+import BuilderExample from "./builder/builder-example";
 
 const runMediatorExample = () => {
   console.log("=============== Running mediator example ===============\n");
@@ -38,8 +39,16 @@ const runMementoExample = () => {
   console.log("=============== End of memento example ===============\n");
 };
 
+const runBuilderExample = () => {
+  console.log("=============== Running builder example ===============\n");
+  const app = new BuilderExample();
+  app.makeCar();
+  console.log("=============== End of builder example ===============\n");
+};
+
 const main = () => {
   runMediatorExample();
   runMementoExample();
+  runBuilderExample();
 };
 main();
